@@ -1,6 +1,4 @@
 # COOKIE-RUN Project 
-------------
-<img
 ## 사용 기술
 Java, Oracle
 ## 프로젝트 기획 의도
