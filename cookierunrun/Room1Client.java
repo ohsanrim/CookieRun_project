@@ -198,7 +198,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 	}
 
 	public void service() {
-		String serverIP = "192.168.0.159"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
+		String serverIP = "172.30.1.28"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
 		//String serverIP = "192.168.147.4";
 		if (serverIP == null || serverIP.length() == 0) {
 			System.out.println("서버IP가 입력되지 않았습니다.");

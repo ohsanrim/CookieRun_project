@@ -42,7 +42,7 @@ class LobbyHandler extends Thread {	// 클라이언트의 소켓 쓰레드 부�
 					// 남아있는 클라이언트
 					// Arraylist 에서 퇴장한사람을 없애야 한다.
 					list.remove(this);
-
+					
 					broadcast(nickName + "님이 퇴장하였습니다.");
 					break; // 와일문 나가기
 				}//if문의 끝
