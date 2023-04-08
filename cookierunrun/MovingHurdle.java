@@ -70,18 +70,18 @@ public class MovingHurdle extends JPanel implements Runnable {
         Graphics2D g2d = (Graphics2D) g;
         Toolkit t = Toolkit.getDefaultToolkit();
         // 1라운드 장애물 이미지 설정
-        round1_hurdle1 = t.getImage("C:\\cookierun\\png\\ep1_jump1.png");
-        round1_hurdle2 = t.getImage("C:\\cookierun\\png\\ep1_jump2.png");
-        round1_hurdle3 = t.getImage("C:\\cookierun\\png\\ep1_jump3.png");
-        round1_hurdle4 = t.getImage("C:\\cookierun\\png\\ep1_slide1.png");
-        round1_hurdle5 = t.getImage("C:\\cookierun\\png\\ep1_slide2.png");
+        round1_hurdle1 = t.getImage("png\\ep1_jump1.png");
+        round1_hurdle2 = t.getImage("png\\ep1_jump2.png");
+        round1_hurdle3 = t.getImage("png\\ep1_jump3.png");
+        round1_hurdle4 = t.getImage("png\\ep1_slide1.png");
+        round1_hurdle5 = t.getImage("png\\ep1_slide2.png");
         round1 = new Image[] { round1_hurdle1, round1_hurdle2, round1_hurdle3, round1_hurdle4, round1_hurdle5 };
         // 2라운드 장애물 설정
-        round2_hurdle1 = t.getImage("C:\\cookierun\\png\\ep3 jump1.png");
-        round2_hurdle2 = t.getImage("C:\\cookierun\\png\\ep3 jump2.png");
-        round2_hurdle3 = t.getImage("C:\\cookierun\\png\\ep3 jump3.png");
-        round2_hurdle4 = t.getImage("C:\\cookierun\\png\\ep3 slide1.png");
-        round2_hurdle5 = t.getImage("C:\\cookierun\\pngep3 slide1.png");
+        round2_hurdle1 = t.getImage("png\\ep3 jump1.png");
+        round2_hurdle2 = t.getImage("png\\ep3 jump2.png");
+        round2_hurdle3 = t.getImage("png\\ep3 jump3.png");
+        round2_hurdle4 = t.getImage("png\\ep3 slide1.png");
+        round2_hurdle5 = t.getImage("pngep3 slide1.png");
         round2 = new Image[] { round2_hurdle1, round2_hurdle2, round2_hurdle3, round2_hurdle4, round2_hurdle5 };
         // 장애물 이미지를 랜덤으로 설정함
         if (hurdleTime.get(0) == gamingTime) {

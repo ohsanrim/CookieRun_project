@@ -88,8 +88,8 @@ class GomJellyDummy extends JPanel implements Runnable {
         Toolkit t = Toolkit.getDefaultToolkit();
         
         // 곰젤리 이미지 생성
-        gom = t.getImage("C:\\cookierun\\png\\Gom_jelly2.png");
-        jellyDisappear = t.getImage("C:\\cookierun\\png\\afterGom.gif");
+        gom = t.getImage("png\\Gom_jelly2.png");
+        jellyDisappear = t.getImage("png\\afterGom.gif");
 
         // 곰젤리 Panel위에 올리기
         if (jellyTime.get(0) == gamingTime) {
@@ -107,7 +107,7 @@ class GomJellyDummy extends JPanel implements Runnable {
                             dummy.get(i).eat = true;
                             countGom++;
                             Jelly.gameScore += 1000;
-                            play("C:\\cookierun\\music\\jelly1.wav");  //젤리 획득시 나오는 사운드 파일 재생
+                            play("music\\jelly1.wav");  //젤리 획득시 나오는 사운드 파일 재생
                         }
                     }
                 }

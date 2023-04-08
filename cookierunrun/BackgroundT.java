@@ -51,10 +51,10 @@ class BackgroundT extends JPanel implements Runnable {
         Toolkit t = Toolkit.getDefaultToolkit();
 
         // 1라운드 배경이미지 설정
-        backgroundImg_Round1 = t.getImage("C:\\cookierun\\png\\firstRound_1.JPG");
-        backgroundImg2_Round1 = t.getImage("C:\\cookierun\\png\\firstRound_1.JPG");
+        backgroundImg_Round1 = t.getImage("png\\firstRound_1.JPG");
+        backgroundImg2_Round1 = t.getImage("png\\firstRound_1.JPG");
         // 2라운드 배경 이미지
-        background1 = t.getImage("C:\\cookierun\\png\\blackghostback.png");
+        background1 = t.getImage("png\\blackghostback.png");
         // gomCountBackground = t.getImage("src/Jelly/Gom_jelly4.png");
         if (gamingTime == 20 && round2 == false)
             Round2Music();
@@ -74,7 +74,7 @@ class BackgroundT extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        play("C:\\cookierun\\music\\gameMusic.wav");
+        play("music\\gameMusic.wav");
         while (!Game1Client.gameDie) {
             // 시간을 측정해서 25초 이후엔 자동으로 2라운드 진입
             endTime = System.currentTimeMillis();
@@ -113,7 +113,7 @@ class BackgroundT extends JPanel implements Runnable {
 
     public void Round2Music() {
         clip.stop();
-        play("C:\\cookierun\\music\\gameMusic2.wav");
+        play("music\\gameMusic2.wav");
     }
 
 }

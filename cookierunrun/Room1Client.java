@@ -64,7 +64,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 	public Room1Client(LoginDTO loginDTO, Clip clip, int roomNum) {
 		super("Waiting Room");
 		roomDAO = new RoomDAO();
-
+		System.out.println("1번방");
 		this.clip = clip;
 		this.loginDTO = loginDTO;
 		this.roomNum = roomNum;
@@ -73,7 +73,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 
 		Image img = new ImageIcon().getImage();
 		panel = new JPanel() {
-			ImageIcon icon = new ImageIcon("C:\\cookierun\\png\\fruit.png");
+			ImageIcon icon = new ImageIcon("png\\fruit.png");
 
 			public void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), null);
@@ -85,7 +85,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		getContentPane().add(panel);
 
 		panel2 = new JPanel() {
-			ImageIcon icon = new ImageIcon("C:\\cookierun\\png\\id_form.png");
+			ImageIcon icon = new ImageIcon("png\\id_form.png");
 
 			public void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), null);
@@ -98,7 +98,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		panel.add(panel2);
 		panel2_1 = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\cookie_man.gif");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\cookie_man.gif");
 				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -110,7 +110,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		user1.setForeground(Color.WHITE);
 		panel2.add(user1);
 
-		rivalReadyBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+		rivalReadyBtn = new JButton(new ImageIcon("png\\ready_2.png"));
 		rivalReadyBtn.setBounds(30, 280, 140, 60);
 		rivalReadyBtn.setEnabled(false);
 
@@ -118,7 +118,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		panel2.add(panel2_1);
 
 		panel3 = new JPanel() {
-			ImageIcon icon = new ImageIcon("C:\\cookierun\\png\\id_form.png");
+			ImageIcon icon = new ImageIcon("png\\id_form.png");
 
 			public void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), null);
@@ -136,7 +136,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		user2.setOpaque(false);
 		panel3.add(user2);
 
-		readyBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+		readyBtn = new JButton(new ImageIcon("png\\ready_2.png"));
 		readyBtn.setBounds(30, 280, 140, 60);
 		panel.add(panel3);
 		panel2.add(readyBtn);
@@ -163,7 +163,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		panel.add(panel4);
 
 		panel5 = new JPanel() {
-			ImageIcon icon = new ImageIcon("C:\\cookierun\\png\\cookieRun.png");
+			ImageIcon icon = new ImageIcon("png\\cookieRun.png");
 
 			public void paintComponent(Graphics g) {
 				g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), null);
@@ -176,7 +176,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 
 		panel.add(panel5);
 
-		outBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\out.png"));
+		outBtn = new JButton(new ImageIcon("png\\out.png"));
 		outBtn.setBounds(550, 8, 130, 45);
 		panel.add(outBtn);
 
@@ -198,7 +198,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 	}
 
 	public void service() {
-		String serverIP = "172.30.1.28"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
+		String serverIP = "127.0.0.1"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
 		//String serverIP = "192.168.147.4";
 		if (serverIP == null || serverIP.length() == 0) {
 			System.out.println("서버IP가 입력되지 않았습니다.");
@@ -261,25 +261,25 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 						if (!temp[0].equals(nickName)) { // 상대방의 메세지 -수정(equals)로 변경
 							if ((temp[1].trim()).equals("ready")) {
 								rivalReady = true;
-								rivalReadyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_1.png"));
+								rivalReadyBtn.setIcon(new ImageIcon("png\\ready_1.png"));
 								if (meReady) {
 									gameStart();
 								}
 							} else {
 								rivalReady = false;
-								rivalReadyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+								rivalReadyBtn.setIcon(new ImageIcon("png\\ready_2.png"));
 							}
 						} else { // 내가 보낸 ready메세지==ready버튼을 누를 경우와 동일한 결과값을 출력해야만 함
 							if ((temp[1].trim()).equals("ready")) {
 								sw++;
-								readyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_1.png"));
+								readyBtn.setIcon(new ImageIcon("png\\ready_1.png"));
 								meReady = true;
 								if (rivalReady) {
 									gameStart();
 								}
 							} else if ((temp[1].trim()).equals("unready")) {
 								sw--;
-								readyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+								readyBtn.setIcon(new ImageIcon("png\\ready_2.png"));
 								meReady = false;
 							}
 
@@ -300,7 +300,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 						panel3_1.repaint();
 						user2.setText("");
 						sw = 0;
-						readyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+						readyBtn.setIcon(new ImageIcon("png\\ready_2.png"));
 						readyBtn.setEnabled(false);
 					}
 				}
@@ -379,7 +379,7 @@ public class Room1Client extends JFrame implements ActionListener, Runnable {
 		sw = 0;
 		meReady = false;
 		rivalReady = false;
-		readyBtn.setIcon(new ImageIcon("C:\\cookierun\\png\\ready_2.png"));
+		readyBtn.setIcon(new ImageIcon("png\\ready_2.png"));
 		clip.close();
 		new Loading(loginDTO,1);
 		roomDAO.updateGamingState(roomNum);
@@ -402,7 +402,7 @@ class Loading extends JFrame implements Runnable {
 
 		JPanel panel = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\load.gif");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\load.gif");
 				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -449,7 +449,7 @@ class Panel3_11 extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		if (Room1Client.enterClient) {
-			Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\cookie_girl.gif");
+			Image image = Toolkit.getDefaultToolkit().getImage("png\\cookie_girl.gif");
 			g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 		}
 		setOpaque(false);

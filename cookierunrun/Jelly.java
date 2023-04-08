@@ -38,8 +38,8 @@ public class Jelly extends JPanel implements Runnable {
         
         // 이미지 생성
         Toolkit t = Toolkit.getDefaultToolkit();
-        jelly = t.getImage("C:\\cookierun\\png\\jelly.png");
-        coin = t.getImage("C:\\cookierun\\png\\minicoin.png");        
+        jelly = t.getImage("png\\jelly.png");
+        coin = t.getImage("png\\minicoin.png");        
         // list안의 젤리를 패널에 그려주기
         try {
             if (list.size() > 0) {

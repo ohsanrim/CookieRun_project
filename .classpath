@@ -7,6 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="lib" path="lib/mail-1.4.7.jar"/>
-	<classpathentry kind="lib" path="lib/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="lib/mariadb-java-client-3.0.7.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

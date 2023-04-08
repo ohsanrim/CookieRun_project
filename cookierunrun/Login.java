@@ -53,7 +53,7 @@ public class Login extends JFrame implements ActionListener {
 	public Login() {
 		super("LogIn");
 
-		icon = new ImageIcon("C:\\cookierun\\png\\Login.png");
+		icon = new ImageIcon("png\\Login.png");
 		// 배경화면을 입혀주는 패널 생성
 		JPanel backP = new JPanel(new GridLayout(2, 1, 10, 10)) {
 			public void paintComponent(Graphics g) {
@@ -121,7 +121,8 @@ public class Login extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		// 배경음악
-		File file = new File("C:\\cookierun\\music\\loginMusic.wav");
+		//File file = new File("C:\\cookierun\\music\\loginMusic.wav");
+		File file = new File("music\\loginMusic.wav");
 
 		try {
 			AudioInputStream stream = AudioSystem.getAudioInputStream(file);
@@ -248,7 +249,7 @@ class Register extends JFrame implements ActionListener {
 	public Register() {
 		super("Cookirun SignUp");
 		list = new JList<LoginDTO>();
-		icon = new ImageIcon("C:\\cookierun\\png\\RegisterBackgroundImg.jpg");
+		icon = new ImageIcon("png\\RegisterBackgroundImg.jpg");
 		JPanel background = new JPanel() {
 			public void paintComponent(Graphics g) {
 				Dimension d = getSize();
@@ -572,10 +573,10 @@ class Register extends JFrame implements ActionListener {
 }
 
 class RegisterDAO {
-	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String username = "c##java";
-	private String password = "bit";
+	private String driver = "org.mariadb.jdbc.Driver";
+	private String url = "jdbc:mariadb://127.0.0.1:3306/cookierun";
+	private String username = "root";
+	private String password = "0000";
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;

@@ -97,18 +97,18 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 				}
 			}
 		}, 0, sleepSec, TimeUnit.SECONDS);
-		play("C:\\cookierun\\music\\LobbyMusic.wav");
+		play("music\\LobbyMusic.wav");
 		setLayout(null); // 프레임깨기
 		// 버튼 만들기
-		// makeRoomBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\방만들기.png"));
+		// makeRoomBtn = new JButton(new ImageIcon("png\\방만들기.png"));
 		sendBtn = new JButton("보내기");
 		exitBtn = new JButton("나가기");
-		room1Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
-		room2Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
-		room3Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
-		room4Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
-		room5Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
-		room6Btn = new JButton(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
+		room1Btn = new JButton(new ImageIcon("png\\빈방.png"));
+		room2Btn = new JButton(new ImageIcon("png\\빈방.png"));
+		room3Btn = new JButton(new ImageIcon("png\\빈방.png"));
+		room4Btn = new JButton(new ImageIcon("png\\빈방.png"));
+		room5Btn = new JButton(new ImageIcon("png\\빈방.png"));
+		room6Btn = new JButton(new ImageIcon("png\\빈방.png"));
 
 		user1L = new JLabel("");
 		user1L.setBounds(220, 145, 60, 20);
@@ -147,11 +147,11 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		user10L.setOpaque(false);
 
 		rosterA = new JTextArea("");
-		rosterL = new JLabel(new ImageIcon("C:\\cookierun\\png\\접속자목록.png"));
+		rosterL = new JLabel(new ImageIcon("png\\접속자목록.png"));
 		chatA = new JTextArea();
 		chatT = new JTextField();
-		labelL = new JLabel(new ImageIcon("C:\\cookierun\\png\\쿠키런이름2.PNG"));
-		backGroundL = new JLabel(new ImageIcon("C:\\cookierun\\png\\배경화면.jpg"));
+		labelL = new JLabel(new ImageIcon("png\\쿠키런이름2.PNG"));
+		backGroundL = new JLabel(new ImageIcon("png\\배경화면.jpg"));
 		// 방만들기 버튼
 		// makeRoomBtn.setBounds(20, 100, 150, 40);
 		// 프레임에 붙히기
@@ -214,7 +214,7 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		// 내 상태창 정보
 		JPanel myInfoPanel = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\사용자정보.png");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\사용자정보.png");
 				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -247,7 +247,7 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		// 랭킹 관련
 		JPanel rankLobby = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\rankLobby.png");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\rankLobby.png");
 				g.drawImage(image, 5, 5, 80, 150, this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -281,7 +281,7 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		// gif파일 넣기
 		JPanel panel_gif1 = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\활쟁이뛰는거.gif");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\활쟁이뛰는거.gif");
 				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -290,7 +290,7 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		panel_gif1.setBounds(180, 0, 130, 130);
 		JPanel panel_gif2 = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\기본뛰는거.gif");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\기본뛰는거.gif");
 				g.drawImage(image, 0, -25, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -355,18 +355,18 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 	      roomAr = roomDAO.selectAllRoom();
 	      // 1번방
 	      if (roomAr.get(0).getRoomState() == 1) {
-	         room1Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
+	         room1Btn.setIcon(new ImageIcon("png\\빈방.png"));
 	         //user1L.setText(roomDAO.selectAllRoom().get(0).getUser1());
 	         user1L.setText("");
 	         user2L.setText("");
 	      } else if (roomAr.get(0).getRoomState() == 2) {
-	         room1Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\대기중.png"));
+	         room1Btn.setIcon(new ImageIcon("png\\대기중.png"));
 	         String user1 = roomAr.get(0).getUser1();
 	         user1L.setText(user1);
 	         String user2 = roomAr.get(0).getUser2();
 	         user2L.setText(user2);
 	      } else if (roomAr.get(0).getRoomState() == 3) {
-	         room1Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\게임중.png"));
+	         room1Btn.setIcon(new ImageIcon("png\\게임중.png"));
 	         String user1 = roomAr.get(0).getUser1();
 	         user1L.setText(user1);
 	         String user2 = roomAr.get(0).getUser2();
@@ -375,17 +375,17 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 	      
 	      // 2번방
 	      if (roomAr.get(1).getRoomState() == 1) {
-	         room2Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
+	         room2Btn.setIcon(new ImageIcon("png\\빈방.png"));
 	         user3L.setText("");
 	         user4L.setText("");
 	      } else if (roomAr.get(1).getRoomState() == 2) {
-	         room2Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\대기중.png"));
+	         room2Btn.setIcon(new ImageIcon("png\\대기중.png"));
 	         String user3 = roomAr.get(1).getUser1();
 	         user3L.setText(user3);
 	         String user4 = roomAr.get(1).getUser2();
 	         user4L.setText(user4);
 	      } else if (roomAr.get(1).getRoomState() == 3) {
-	         room2Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\게임중.png"));
+	         room2Btn.setIcon(new ImageIcon("png\\게임중.png"));
 	         String user3 = roomAr.get(1).getUser1();
 	         user3L.setText(user3);
 	         String user4 = roomAr.get(1).getUser2();
@@ -394,17 +394,17 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 	      
 	      // 5번방
 	      if (roomAr.get(4).getRoomState() == 1) {
-	         room5Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\빈방.png"));
+	         room5Btn.setIcon(new ImageIcon("png\\빈방.png"));
 	         user9L.setText("");
 	         user10L.setText("");
 	      } else if (roomAr.get(4).getRoomState() == 2) {
-	         room5Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\대기중.png"));
+	         room5Btn.setIcon(new ImageIcon("png\\대기중.png"));
 	         String user9 = roomAr.get(4).getUser1();
 	         user9L.setText(user9);
 	         String user10 = roomAr.get(4).getUser2();
 	         user10L.setText(user10);
 	      } else if (roomAr.get(4).getRoomState() == 3) {
-	         room5Btn.setIcon(new ImageIcon("C:\\cookierun\\png\\게임중.png"));
+	         room5Btn.setIcon(new ImageIcon("png\\게임중.png"));
 	         String user9 = roomAr.get(4).getUser1();
 	         user9L.setText(user9);
 	         String user10 = roomAr.get(4).getUser2();
@@ -414,7 +414,7 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 
 	public void service() {
 		// 서버는 누구인지 모른다 그래서 ip를 입력해주는것이다.
-		String serverIP = "172.30.1.28"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
+		String serverIP = "127.0.0.1"; // 이렇게 적으면 바로 서버로 들어간다 IP안치고
 		//String serverIP = "192.168.147.4";
 		if (serverIP == null || serverIP.length() == 0) {
 			System.out.println("서버IP가 입력되지 않았습니다.");
@@ -481,25 +481,29 @@ class LobbyClient extends JFrame implements ActionListener, Runnable {
 		roomAr = roomDAO.selectAllRoom();
 		if (e.getSource() == room1Btn) {
 			roomNum = 1;
-			if (roomAr.get(0).getUserCount() == 0) {
+			if(roomAr.size() == 0) {
 				new MakeRoom(this, loginDTO, clip, roomNum);
-			} else if (roomAr.get(0).getUserCount() == 1) {
-				if (roomAr.get(0).getSecretRoom() == 0) {
-					roomDAO.updateUser2(loginDTO.getNickName(), roomNum);
-					new Room1Client(loginDTO, clip, roomNum).service();
-					dispose();
-				} else if (roomAr.get(0).getSecretRoom() == 1) {
-					String pwInput = JOptionPane.showInputDialog("비밀번호를 입력하시오");
-					if (roomAr.get(0).getRoomPw().equals(pwInput)) {
+			} else {
+				if (roomAr.get(0).getUserCount() == 0) {
+					new MakeRoom(this, loginDTO, clip, roomNum);
+				} else if (roomAr.get(0).getUserCount() == 1) {
+					if (roomAr.get(0).getSecretRoom() == 0) {
 						roomDAO.updateUser2(loginDTO.getNickName(), roomNum);
 						new Room1Client(loginDTO, clip, roomNum).service();
 						dispose();
-					} else {
-						JOptionPane.showMessageDialog(this, "비밀번호가 틀렸습니다.");
+					} else if (roomAr.get(0).getSecretRoom() == 1) {
+						String pwInput = JOptionPane.showInputDialog("비밀번호를 입력하시오");
+						if (roomAr.get(0).getRoomPw().equals(pwInput)) {
+							roomDAO.updateUser2(loginDTO.getNickName(), roomNum);
+							new Room1Client(loginDTO, clip, roomNum).service();
+							dispose();
+						} else {
+							JOptionPane.showMessageDialog(this, "비밀번호가 틀렸습니다.");
+						}
 					}
+				} else if (roomAr.get(0).getUserCount() == 2) {
+					JOptionPane.showMessageDialog(this, "인원이 꽉 찼습니다.");
 				}
-			} else if (roomAr.get(0).getUserCount() == 2) {
-				JOptionPane.showMessageDialog(this, "인원이 꽉 찼습니다.");
 			}
 		}
 		// 2번방
@@ -610,10 +614,10 @@ class MakeRoom extends JFrame implements ActionListener {
 
 		setContentPane(new MyPanel());
 		// 확인 버튼
-		createBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\확인.png"));
+		createBtn = new JButton(new ImageIcon("png\\확인.png"));
 		createBtn.setBounds(100, 242, 110, 35);
 		// 취소 버튼
-		cancelBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\취소.png"));
+		cancelBtn = new JButton(new ImageIcon("png\\취소.png"));
 		cancelBtn.setBounds(245, 242, 110, 35);
 		// 방제목 라벨
 		roomNameL = new JLabel("방  제 목");
@@ -686,6 +690,7 @@ class MakeRoom extends JFrame implements ActionListener {
 				if (result == JOptionPane.OK_OPTION)
 					return;
 			}
+			System.out.println("room_num >> "+roomNum);
 			if (roomNum == 1) {
 				RoomDTO roomDTO = new RoomDTO();
 				roomDTO.setRoomNumber(1);
@@ -765,7 +770,7 @@ class MakeRoom extends JFrame implements ActionListener {
 	class MyPanel extends JPanel {
 		public void paintComponent(Graphics g) {
 			Toolkit t = Toolkit.getDefaultToolkit();
-			Image ing = t.getImage("C:\\cookierun\\png\\방만들기화면.png");
+			Image ing = t.getImage("png\\방만들기화면.png");
 			g.drawImage(ing, 0, -10, this);
 		}
 	}

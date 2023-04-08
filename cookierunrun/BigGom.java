@@ -57,8 +57,8 @@ public class BigGom extends JPanel implements Runnable {
         Graphics2D g2d = (Graphics2D) g;
         Toolkit t = Toolkit.getDefaultToolkit();
         // 곰젤리와 코인 이미지 불러오기
-        bigCoin = t.getImage("C:\\cookierun\\png\\Coin.png");
-        bigGom = t.getImage("C:\\cookierun\\png\\Gom_jelly4.png");
+        bigCoin = t.getImage("png\\Coin.png");
+        bigGom = t.getImage("png\\Gom_jelly4.png");
         // 리스트 안의 시간이랑 플레이 시간이 일치하면 빅 곰젤리 생성
         if (bigTime.get(0) == gamingTime) {
             bigDTO = new BigDTO();

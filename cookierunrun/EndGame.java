@@ -66,7 +66,7 @@ public class EndGame extends JFrame implements ActionListener{
 		}; 
 		bubbleP.setBounds(100,100,100,100);		
 		
-		yesBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\Gameresult.jpg"));
+		yesBtn = new JButton(new ImageIcon("png\\Gameresult.jpg"));
 		yesBtn.setBounds(245,350,200,60);
 		yesBtn.addActionListener(this);
 		//score라벨 설정

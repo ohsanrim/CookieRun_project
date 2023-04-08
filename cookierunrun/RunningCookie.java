@@ -37,16 +37,16 @@ public class RunningCookie extends JPanel implements Runnable{
 		Toolkit t = Toolkit.getDefaultToolkit();
 		
 		// 이미지 불러오기
-		cookieRun1 = t.getImage("C:\\cookierun\\png\\general_1.gif");
-		cookieRun2 = t.getImage("C:\\cookierun\\png\\general_2.gif");
-		cookieRun3 = t.getImage("C:\\cookierun\\png\\general_3.gif");
-		cookieRun4 = t.getImage("C:\\cookierun\\png\\general_4.gif");
-		cookieRun5 = t.getImage("C:\\cookierun\\png\\slide0.png");
-		cookieRun6 = t.getImage("C:\\cookierun\\png\\slide1.png");
-		cookieRun7 = t.getImage("C:\\cookierun\\png\\jump0.png");
+		cookieRun1 = t.getImage("png\\general_1.gif");
+		cookieRun2 = t.getImage("png\\general_2.gif");
+		cookieRun3 = t.getImage("png\\general_3.gif");
+		cookieRun4 = t.getImage("png\\general_4.gif");
+		cookieRun5 = t.getImage("png\\slide0.png");
+		cookieRun6 = t.getImage("png\\slide1.png");
+		cookieRun7 = t.getImage("png\\jump0.png");
 		
 		//장애물레 부딪혔을 떄 나오는 이미지
-		cookieRun8 = t.getImage("C:\\cookierun\\png\\Char_Hit.png");		
+		cookieRun8 = t.getImage("png\\Char_Hit.png");		
 		// 사진 전환하기
 		if(choice==0) g.drawImage(cookieRun1,80,250, this);
 		else if(choice==1) { g.drawImage(cookieRun2,80,250, this); cookieY=250;}

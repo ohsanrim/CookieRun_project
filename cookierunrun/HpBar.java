@@ -79,17 +79,17 @@ public class HpBar extends JPanel implements Runnable {
 		Graphics2D g2d = (Graphics2D) g;
 		Toolkit t = Toolkit.getDefaultToolkit();
 		
-		rivalScoreImg= t.getImage("C:\\cookierun\\png\\rivalScore.png");
+		rivalScoreImg= t.getImage("png\\rivalScore.png");
 		
 		// 화면 상단 위젯 이미지 불러오기
-		gomCountBackground = t.getImage("C:\\cookierun\\png\\Gom_jelly4.png");
-		coinCountBackground = t.getImage("C:\\cookierun\\png\\Coin.png");
-		scoreBackground = t.getImage("C:\\cookierun\\png\\jelly.png");
-		//number1 = t.getImage("C:\\cookierun\\png\\number1.png");
+		gomCountBackground = t.getImage("png\\Gom_jelly4.png");
+		coinCountBackground = t.getImage("png\\Coin.png");
+		scoreBackground = t.getImage("png\\jelly.png");
+		//number1 = t.getImage("png\\number1.png");
 		
 		// 체력 게이지 만들기
-		HpBar = t.getImage("C:\\cookierun\\png\\HpBar_wh.png");
-		HbBar = t.getImage("C:\\cookierun\\png\\HbBark.gif");
+		HpBar = t.getImage("png\\HpBar_wh.png");
+		HbBar = t.getImage("png\\HbBark.gif");
 
 		//만약 죽지 않았을 떄(체력이 0 이상일 때)		
 		g.drawImage(HbBar, 130, 38, (MovingHurdle.health * 4), 20, this);

@@ -8,11 +8,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RoomDAO {
-	private String driver = "oracle.jdbc.driver.OracleDriver";
-	// private String url = "jdbc:oracle:thin:@192.168.0.20:1521:xe";
-	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String username = "c##java";
-	private String password = "bit";
+	private String driver = "org.mariadb.jdbc.Driver";
+	private String url = "jdbc:mariadb://192.168.0.7:3306/cookierun";
+	private String username = "root";
+	private String password = "0000";
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;

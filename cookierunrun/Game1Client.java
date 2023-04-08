@@ -129,7 +129,7 @@ class Game1Client extends JFrame implements KeyListener, Runnable {
 
 	// 클라이언트 서비스
 	public void service() {
-		String serverIP = "172.30.1.28";
+		String serverIP = "127.0.0.1";
 		//String serverIP = "192.168.147.4";
 		if (serverIP == null || serverIP.length() == 0) {
 			System.out.println("서버IP가 입력되지 않았습니다.");
@@ -298,7 +298,7 @@ class EndLoading1 extends JFrame implements Runnable {
 
 		JPanel panel = new JPanel() {
 			public void paintComponent(Graphics g) {
-				Image image = Toolkit.getDefaultToolkit().getImage("C:\\cookierun\\png\\EndLoading.gif");
+				Image image = Toolkit.getDefaultToolkit().getImage("png\\EndLoading.gif");
 				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -375,10 +375,10 @@ class BackgroundT1 extends JPanel implements Runnable {
         Toolkit t = Toolkit.getDefaultToolkit();
 
         // 1라운드 배경이미지 설정
-        backgroundImg_Round1 = t.getImage("C:\\cookierun\\png\\firstRound_1.JPG");
-        backgroundImg2_Round1 = t.getImage("C:\\cookierun\\png\\firstRound_1.JPG");
+        backgroundImg_Round1 = t.getImage("png\\firstRound_1.JPG");
+        backgroundImg2_Round1 = t.getImage("png\\firstRound_1.JPG");
         // 2라운드 배경 이미지
-        background1 = t.getImage("C:\\cookierun\\png\\blackghostback.png");
+        background1 = t.getImage("png\\blackghostback.png");
         // gomCountBackground = t.getImage("src/Jelly/Gom_jelly4.png");
         if (gamingTime == 20 && round2 == false)
             Round2Music();
@@ -398,7 +398,7 @@ class BackgroundT1 extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        play("C:\\cookierun\\music\\gameMusic.wav");
+        play("music\\gameMusic.wav");
         while (!Game1Client.gameDie) {
             // 시간을 측정해서 25초 이후엔 자동으로 2라운드 진입
             endTime = System.currentTimeMillis();
@@ -437,7 +437,7 @@ class BackgroundT1 extends JPanel implements Runnable {
 
     public void Round2Music() {
         clip.stop();
-        play("C:\\cookierun\\music\\gameMusic2.wav");
+        play("music\\gameMusic2.wav");
     }
 
 }
@@ -471,16 +471,16 @@ class RunningCookie1 extends JPanel implements Runnable{
 		Toolkit t = Toolkit.getDefaultToolkit();
 		
 		// 이미지 불러오기
-		cookieRun1 = t.getImage("C:\\cookierun\\png\\general_1.gif");
-		cookieRun2 = t.getImage("C:\\cookierun\\png\\general_2.gif");
-		cookieRun3 = t.getImage("C:\\cookierun\\png\\general_3.gif");
-		cookieRun4 = t.getImage("C:\\cookierun\\png\\general_4.gif");
-		cookieRun5 = t.getImage("C:\\cookierun\\png\\slide0.png");
-		cookieRun6 = t.getImage("C:\\cookierun\\png\\slide1.png");
-		cookieRun7 = t.getImage("C:\\cookierun\\png\\jump0.png");
+		cookieRun1 = t.getImage("png\\general_1.gif");
+		cookieRun2 = t.getImage("png\\general_2.gif");
+		cookieRun3 = t.getImage("png\\general_3.gif");
+		cookieRun4 = t.getImage("png\\general_4.gif");
+		cookieRun5 = t.getImage("png\\slide0.png");
+		cookieRun6 = t.getImage("png\\slide1.png");
+		cookieRun7 = t.getImage("png\\jump0.png");
 		
 		//장애물레 부딪혔을 떄 나오는 이미지
-		cookieRun8 = t.getImage("C:\\cookierun\\png\\Char_Hit.png");		
+		cookieRun8 = t.getImage("png\\Char_Hit.png");		
 		// 사진 전환하기
 		if(choice==0) g.drawImage(cookieRun1,80,250, this);
 		else if(choice==1) { g.drawImage(cookieRun2,80,250, this); cookieY=250;}
@@ -625,18 +625,18 @@ class MovingHurdle1 extends JPanel implements Runnable {
         Graphics2D g2d = (Graphics2D) g;
         Toolkit t = Toolkit.getDefaultToolkit();
         // 1라운드 장애물 이미지 설정
-        round1_hurdle1 = t.getImage("C:\\cookierun\\png\\ep1_jump1.png");
-        round1_hurdle2 = t.getImage("C:\\cookierun\\png\\ep1_jump2.png");
-        round1_hurdle3 = t.getImage("C:\\cookierun\\png\\ep1_jump3.png");
-        round1_hurdle4 = t.getImage("C:\\cookierun\\png\\ep1_slide1.png");
-        round1_hurdle5 = t.getImage("C:\\cookierun\\png\\ep1_slide2.png");
+        round1_hurdle1 = t.getImage("png\\ep1_jump1.png");
+        round1_hurdle2 = t.getImage("png\\ep1_jump2.png");
+        round1_hurdle3 = t.getImage("png\\ep1_jump3.png");
+        round1_hurdle4 = t.getImage("png\\ep1_slide1.png");
+        round1_hurdle5 = t.getImage("png\\ep1_slide2.png");
         round1 = new Image[] { round1_hurdle1, round1_hurdle2, round1_hurdle3, round1_hurdle4, round1_hurdle5 };
         // 2라운드 장애물 설정
-        round2_hurdle1 = t.getImage("C:\\cookierun\\png\\ep3 jump1.png");
-        round2_hurdle2 = t.getImage("C:\\cookierun\\png\\ep3 jump2.png");
-        round2_hurdle3 = t.getImage("C:\\cookierun\\png\\ep3 jump3.png");
-        round2_hurdle4 = t.getImage("C:\\cookierun\\png\\ep3 slide1.png");
-        round2_hurdle5 = t.getImage("C:\\cookierun\\pngep3 slide1.png");
+        round2_hurdle1 = t.getImage("png\\ep3 jump1.png");
+        round2_hurdle2 = t.getImage("png\\ep3 jump2.png");
+        round2_hurdle3 = t.getImage("png\\ep3 jump3.png");
+        round2_hurdle4 = t.getImage("png\\ep3 slide1.png");
+        round2_hurdle5 = t.getImage("pngep3 slide1.png");
         round2 = new Image[] { round2_hurdle1, round2_hurdle2, round2_hurdle3, round2_hurdle4, round2_hurdle5 };
         // 장애물 이미지를 랜덤으로 설정함
         if (hurdleTime.get(0) == gamingTime) {
@@ -808,8 +808,8 @@ class Jelly1 extends JPanel implements Runnable {
         
         // 이미지 생성
         Toolkit t = Toolkit.getDefaultToolkit();
-        jelly = t.getImage("C:\\cookierun\\png\\jelly.png");
-        coin = t.getImage("C:\\cookierun\\png\\minicoin.png");        
+        jelly = t.getImage("png\\jelly.png");
+        coin = t.getImage("png\\minicoin.png");        
         // list안의 젤리를 패널에 그려주기
         try {
             if (list.size() > 0) {
@@ -949,8 +949,8 @@ class GomJellyDummy1 extends JPanel implements Runnable {
         Toolkit t = Toolkit.getDefaultToolkit();
         
         // 곰젤리 이미지 생성
-        gom = t.getImage("C:\\cookierun\\png\\Gom_jelly2.png");
-        jellyDisappear = t.getImage("C:\\cookierun\\png\\afterGom.gif");
+        gom = t.getImage("png\\Gom_jelly2.png");
+        jellyDisappear = t.getImage("png\\afterGom.gif");
 
         // 곰젤리 Panel위에 올리기
         if (jellyTime.get(0) == gamingTime) {
@@ -968,7 +968,7 @@ class GomJellyDummy1 extends JPanel implements Runnable {
                             dummy.get(i).eat = true;
                             countGom++;
                             Jelly1.gameScore += 1000;
-                            play("C:\\cookierun\\music\\jelly1.wav");  //젤리 획득시 나오는 사운드 파일 재생
+                            play("music\\jelly1.wav");  //젤리 획득시 나오는 사운드 파일 재생
                         }
                     }
                 }
@@ -1071,8 +1071,8 @@ class BigGom1 extends JPanel implements Runnable {
         Graphics2D g2d = (Graphics2D) g;
         Toolkit t = Toolkit.getDefaultToolkit();
         // 곰젤리와 코인 이미지 불러오기
-        bigCoin = t.getImage("C:\\cookierun\\png\\Coin.png");
-        bigGom = t.getImage("C:\\cookierun\\png\\Gom_jelly4.png");
+        bigCoin = t.getImage("png\\Coin.png");
+        bigGom = t.getImage("png\\Gom_jelly4.png");
         // 리스트 안의 시간이랑 플레이 시간이 일치하면 빅 곰젤리 생성
         if (bigTime.get(0) == gamingTime) {
             bigDTO = new BigDTO();
@@ -1224,17 +1224,17 @@ class HpBar1 extends JPanel implements Runnable {
 		Graphics2D g2d = (Graphics2D) g;
 		Toolkit t = Toolkit.getDefaultToolkit();
 		
-		rivalScoreImg= t.getImage("C:\\cookierun\\png\\rivalScore.png");
+		rivalScoreImg= t.getImage("png\\rivalScore.png");
 		
 		// 화면 상단 위젯 이미지 불러오기
-		gomCountBackground = t.getImage("C:\\cookierun\\png\\Gom_jelly4.png");
-		coinCountBackground = t.getImage("C:\\cookierun\\png\\Coin.png");
-		scoreBackground = t.getImage("C:\\cookierun\\png\\jelly.png");
-		//number1 = t.getImage("C:\\cookierun\\png\\number1.png");
+		gomCountBackground = t.getImage("png\\Gom_jelly4.png");
+		coinCountBackground = t.getImage("png\\Coin.png");
+		scoreBackground = t.getImage("png\\jelly.png");
+		//number1 = t.getImage("png\\number1.png");
 		
 		// 체력 게이지 만들기
-		HpBar = t.getImage("C:\\cookierun\\png\\HpBar_wh.png");
-		HbBar = t.getImage("C:\\cookierun\\png\\HbBark.gif");
+		HpBar = t.getImage("png\\HpBar_wh.png");
+		HbBar = t.getImage("png\\HbBark.gif");
 
 		//만약 죽지 않았을 떄(체력이 0 이상일 때)		
 		g.drawImage(HbBar, 130, 38, (MovingHurdle1.health * 4), 20, this);
@@ -1316,8 +1316,8 @@ class EndGame1 extends JFrame implements ActionListener{
 		        this.setSize(100,100);
 		        Graphics2D g2d = (Graphics2D) g;
 		        Toolkit t = Toolkit.getDefaultToolkit();
-				win = t.getImage("C:\\cookierun\\png\\Win.png");
-				lose = t.getImage("C:\\cookierun\\png\\Lose.png");
+				win = t.getImage("png\\Win.png");
+				lose = t.getImage("png\\Lose.png");
 				if(Game1Client.rivalScore>Jelly1.gameScore) {
 					g.drawImage(lose,0,0,this.getWidth(),this.getHeight(),this);
 				} else {
@@ -1327,7 +1327,7 @@ class EndGame1 extends JFrame implements ActionListener{
 		}; 
 		bubbleP.setBounds(100,100,100,100);		
 		
-		yesBtn = new JButton(new ImageIcon("C:\\cookierun\\png\\Gameresult.jpg"));
+		yesBtn = new JButton(new ImageIcon("png\\Gameresult.jpg"));
 		yesBtn.setBounds(245,350,200,60);
 		yesBtn.addActionListener(this);
 		//score라벨 설정
@@ -1406,7 +1406,7 @@ class EndBack1 extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		Toolkit t = Toolkit.getDefaultToolkit();
-		scoreBoard = t.getImage("C:\\cookierun\\png\\GameresultBack.jpg");
+		scoreBoard = t.getImage("png\\GameresultBack.jpg");
 		g.drawImage(scoreBoard,0,0,this.getWidth(), this.getHeight()-20,this);
 		
 	}
